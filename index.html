@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kartavya - Empowering NGOs | Managing for Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#98d4a5",
+                        "primary-fixed": "#b3f1bf",
+                        "on-tertiary-fixed": "#001e2f",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#003618",
+                        "tertiary-fixed-dim": "#9fccee",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-container-low": "#f1f4f9",
+                        "on-tertiary-container": "#8ab6d7",
+                        "background": "#f7f9ff",
+                        "secondary": "#006d32",
+                        "secondary-fixed": "#97f8a9",
+                        "surface-bright": "#f7f9ff",
+                        "on-primary-container": "#83bf90",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00210d",
+                        "primary-container": "#124e2a",
+                        "on-background": "#181c20",
+                        "on-secondary-fixed": "#00210a",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#98d4a5",
+                        "on-primary-fixed-variant": "#16512d",
+                        "secondary-container": "#97f8a9",
+                        "tertiary": "#003149",
+                        "inverse-surface": "#2d3135",
+                        "surface-variant": "#e0e3e8",
+                        "tertiary-container": "#154864",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#7bdb8f",
+                        "surface": "#f7f9ff",
+                        "on-secondary-container": "#007435",
+                        "on-surface-variant": "#414941",
+                        "on-secondary-fixed-variant": "#005224",
+                        "surface-container-highest": "#e0e3e8",
+                        "surface-dim": "#d7dadf",
+                        "surface-tint": "#316a43",
+                        "tertiary-fixed": "#c8e6ff",
+                        "on-surface": "#181c20",
+                        "outline": "#717970",
+                        "on-tertiary-fixed-variant": "#194b68",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c0c9be",
+                        "surface-container": "#ebeef3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-md": ["Manrope"]
+                    },
+                    "boxShadow": {
+                        'level-1': '0 4px 15px rgba(18, 78, 42, 0.05)',
+                        'level-2': '0 10px 30px rgba(18, 78, 42, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<!-- TopNavBar JSON Shared Component -->
+<nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-surface-variant/20 shadow-sm flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto left-0 right-0">
+<div class="flex items-center gap-sm">
+<img alt="Kartavya Logo" class="h-12 w-auto object-contain" src="/image/logo.png"/>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim block leading-tight">kartavY</span>
+<span class="font-caption text-caption text-on-surface-variant block">Empowering NGOs | Managing for Impact</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#vision">Vision &amp; Mission</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#portals">Student Portal</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#portals">NGO Portal</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#features">Features</a>
+</div>
+<div class="flex items-center gap-sm">
+<a class="font-label-md text-label-md text-on-primary bg-secondary px-md py-sm rounded-lg hover:bg-primary transition-colors hidden md:inline-flex" href="mailto:contact@kartavya.org?subject=Inquiry">Contact Us</a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface p-sm">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto flex flex-col items-center justify-center text-center min-h-[70vh] gap-lg">
+<div class="flex flex-col items-center gap-md max-w-4xl">
+<div class="inline-flex items-center gap-2 bg-surface-container-low border border-surface-variant rounded-full px-4 py-2 w-max shadow-sm">
+<span class="material-symbols-outlined text-secondary text-sm icon-fill" data-weight="fill">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant">One Platform • One Ecosystem • Real Impact</span>
+</div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary tracking-tighter leading-tight">
+                Connecting Purpose with Impact
+            </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-3xl leading-relaxed">
+                Kartavya is a unified digital ecosystem designed to seamlessly bridge the gap between Students seeking meaningful engagement, Colleges managing CEP hours, NGOs needing reliable volunteers, and Corporates driving CSR initiatives.
+            </p>
+<div class="flex flex-wrap justify-center items-center gap-md mt-sm">
+<a class="inline-flex items-center justify-center bg-secondary text-on-primary font-label-md text-lg px-xl py-md rounded-lg hover:bg-primary transition-colors h-14" href="mailto:contact@kartavya.org?subject=Get%20in%20Touch">
+                    Get in Touch
+                </a>
+<a class="inline-flex items-center justify-center border-2 border-primary-container text-primary-container font-label-md text-lg px-xl py-md rounded-lg hover:bg-surface-container-low transition-colors h-14" href="#portals">
+                    Explore Onboarding Portals
+                </a>
+</div>
+</div>
+</section>
+<!-- Vision & Mission Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto bg-surface-container-lowest" id="vision">
+<div class="text-center mb-xl">
+<h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-2">
+    Our Vision & Mission
+</h2>
+
+<p class="text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+    Driving systemic change through technology and verified engagement.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-surface p-xl rounded-2xl border border-surface-variant shadow-sm flex flex-col gap-lg items-start">
+<div class="w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[40px]">visibility</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight">Vision</h3>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">To create a transparent, inclusive, and efficient digital ecosystem that empowers every individual and organization to contribute meaningfully to social impact.</p>
+</div>
+</div>
+<div class="bg-surface p-xl rounded-2xl border border-surface-variant shadow-sm flex flex-col gap-lg items-start">
+<div class="w-20 h-20 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[40px]">flag</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight">Mission</h3>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">To bridge the gap between intent and action by providing a robust platform that verifies, tracks, and amplifies social contributions across all sectors of society.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portals Overview -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="portals">
+<div class="text-center mb-xl">
+<div class="text-center mb-xl">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-2">
+        Dedicated Portals
+    </h2>
+    <p class="text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+        Tailored experiences for our key stakeholders.
+    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<div class="bg-surface-container-lowest p-lg rounded-2xl border border-surface-variant shadow-level-1 flex flex-col gap-md">
+<div class="flex items-center gap-md mb-sm">
+<div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Student Portal</h3>
+</div>
+<ul class="space-y-sm text-on-surface-variant font-body-md">
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Seamless CEP Hours Tracking</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Verified Digital Certificates</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Skill-based Volunteering Opportunities</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Build a Comprehensive Impact Portfolio</li>
+</ul>
+<a class="mt-auto inline-flex items-center justify-center bg-surface-container-low text-primary font-label-md px-lg py-sm rounded-lg hover:bg-surface-container-high transition-colors h-12 border border-surface-variant w-full" href="mailto:contact@kartavya.org?subject=Student%20Portal%20Access">Request Student Access</a>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-2xl border border-surface-variant shadow-level-1 flex flex-col gap-md">
+<div class="flex items-center gap-md mb-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">NGO Portal</h3>
+</div>
+<ul class="space-y-sm text-on-surface-variant font-body-md">
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Intelligent Volunteer Matching</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Comprehensive Volunteer Management</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Streamlined Event Publishing</li>
+<li class="flex items-start gap-sm"><span class="material-symbols-outlined text-secondary text-sm mt-1">check_circle</span> Impact Reporting &amp; Analytics</li>
+</ul>
+<a class="mt-auto inline-flex items-center justify-center bg-secondary text-on-primary font-label-md px-lg py-sm rounded-lg hover:bg-primary transition-colors h-12 w-full" href="mailto:contact@kartavya.org?subject=NGO%20Onboarding">Register NGO</a>
+</div>
+</div>
+</section>
+<!-- Stakeholder Benefit Grid -->
+<section class="py-xl px-gutter max-w-container-max mx-auto bg-surface-container-lowest border-y border-surface-variant">
+<div class="text-center mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-sm">Empowering All Stakeholders</h1>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<div class="p-md text-center flex flex-col items-center gap-sm">
+<div class="w-16 h-16 rounded-full bg-surface-container text-on-surface flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Students</h4>
+<p class="font-body-md text-on-surface-variant">Gain real-world experience and verified certificates for career growth.</p>
+</div>
+<div class="p-md text-center flex flex-col items-center gap-sm">
+<div class="w-16 h-16 rounded-full bg-surface-container text-on-surface flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Colleges</h4>
+<p class="font-body-md text-on-surface-variant">Effortlessly manage and verify student CEP hours in one place.</p>
+</div>
+<div class="p-md text-center flex flex-col items-center gap-sm">
+<div class="w-16 h-16 rounded-full bg-surface-container text-on-surface flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<h4 class="font-headline-md text-headline-md">NGOs</h4>
+<p class="font-body-md text-on-surface-variant">Access a dedicated pool of motivated, skilled volunteers easily.</p>
+</div>
+<div class="p-md text-center flex flex-col items-center gap-sm">
+<div class="w-16 h-16 rounded-full bg-surface-container text-on-surface flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Corporates</h4>
+<p class="font-body-md text-on-surface-variant">Drive impactful CSR initiatives with transparent reporting.</p>
+</div>
+</div>
+</section>
+<!-- Core Features Grid -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="features">
+<div class="text-center mb-xl">
+<h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-2">Core Features</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">verified_user</span>
+<h4 class="font-headline-md text-headline-md text-primary">Verified Network</h4>
+<p class="font-body-md text-on-surface-variant">100% verified users and organizations ensuring trust.</p>
+</div>
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">timer</span>
+<h4 class="font-headline-md text-headline-md text-primary">Hour Tracker</h4>
+<p class="font-body-md text-on-surface-variant">Automated logging and verification of volunteering hours.</p>
+</div>
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">workspace_premium</span>
+<h4 class="font-headline-md text-headline-md text-primary">Digital Certificates</h4>
+<p class="font-body-md text-on-surface-variant">Instantly generated, authentic certificates upon completion.</p>
+</div>
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">psychology</span>
+<h4 class="font-headline-md text-headline-md text-primary">Skill-based Matching</h4>
+<p class="font-body-md text-on-surface-variant">Connect the right talent with the right social need.</p>
+</div>
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">assignment_ind</span>
+<h4 class="font-headline-md text-headline-md text-primary">Impact Portfolio</h4>
+<p class="font-body-md text-on-surface-variant">A cumulative record of an individual's lifetime social impact.</p>
+</div>
+<div class="bg-surface p-md rounded-xl border border-surface-variant shadow-sm flex flex-col gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">analytics</span>
+<h4 class="font-headline-md text-headline-md text-primary">Compliance Reports</h4>
+<p class="font-body-md text-on-surface-variant">Ready-to-export reports for institutional requirements.</p>
+</div>
+</div>
+</section>
+<!-- Comparison Table -->
+<section class="py-xl px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-xl">
+<h2 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-2">Why Choose Kartavya?</h2>
+</div>
+<div class="overflow-x-auto rounded-xl border border-surface-variant shadow-sm bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-variant">
+<th class="p-md font-headline-md text-primary">Aspect</th>
+<th class="p-md font-headline-md text-on-surface-variant">Traditional Manual Process</th>
+<th class="p-md font-headline-md text-secondary">Kartavya Platform</th>
+</tr>
+</thead>
+<tbody class="font-body-md">
+<tr class="border-b border-surface-variant">
+<td class="p-md font-semibold">Verification</td>
+<td class="p-md text-on-surface-variant">Prone to errors and fraud</td>
+<td class="p-md text-primary">100% Verified Ecosystem</td>
+</tr>
+<tr class="border-b border-surface-variant">
+<td class="p-md font-semibold">Tracking</td>
+<td class="p-md text-on-surface-variant">Scattered spreadsheets and paperwork</td>
+<td class="p-md text-primary">Centralized, Real-time Dashboard</td>
+</tr>
+<tr class="border-b border-surface-variant">
+<td class="p-md font-semibold">Matching</td>
+<td class="p-md text-on-surface-variant">Random assignment</td>
+<td class="p-md text-primary">Intelligent Skill-based Routing</td>
+</tr>
+<tr>
+<td class="p-md font-semibold">Reporting</td>
+<td class="p-md text-on-surface-variant">Manual compilation taking weeks</td>
+<td class="p-md text-primary">Instant, Exportable Analytics</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Footer JSON Shared Component -->
+<footer class="w-full py-xl bg-tertiary dark:bg-tertiary-container mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-gutter max-w-container-max mx-auto text-tertiary-fixed dark:text-tertiary-fixed-dim font-body-md text-body-md">
+<div class="col-span-1 md:col-span-2 flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="font-headline-md text-headline-md font-bold text-surface-container-lowest">kartavY</span>
+</div>
+<p class="text-tertiary-fixed/80 max-w-md">
+                    Ready to Create Real Impact? Join the digital ecosystem that brings transparency, efficiency, and scale to social initiatives across India.
+                </p>
+<a class="inline-flex items-center justify-center bg-secondary text-on-primary font-label-md text-label-md px-lg py-sm rounded-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors w-max h-12 shadow-sm" href="mailto:contact@kartavya.org?subject=General%20Inquiry">
+                    Email Our Team Directly
+                </a>
+</div>
+<div class="col-span-1 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-surface-container-lowest mb-sm">Links</span>
+<a class="text-tertiary-fixed/80 hover:text-tertiary-fixed hover:underline transition-all opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-tertiary-fixed/80 hover:text-tertiary-fixed hover:underline transition-all opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-tertiary-fixed/80 hover:text-tertiary-fixed hover:underline transition-all opacity-90 hover:opacity-100" href="#">Impact Report</a>
+</div>
+<div class="col-span-1 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-surface-container-lowest mb-sm">Connect</span>
+<a class="text-tertiary-fixed/80 hover:text-tertiary-fixed hover:underline transition-all opacity-90 hover:opacity-100" href="mailto:contact@kartavya.org?subject=General%20Inquiry">Contact Us</a>
+<a class="text-tertiary-fixed/80 hover:text-tertiary-fixed hover:underline transition-all opacity-90 hover:opacity-100" href="mailto:contact@kartavya.org?subject=Partner%20Program">Partner Program</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-lg pt-md border-t border-tertiary-fixed/20 text-center text-tertiary-fixed/60 font-caption text-caption">
+                © 2024 Kartavya Social Impact Ecosystem. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
